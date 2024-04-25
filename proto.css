@@ -22,14 +22,18 @@ body{
     animation: breathIn 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 .title h1:hover{
+    cursor: pointer;
     animation: breathOut 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+.title h1:active{
+    color: rgba(255, 255, 255, 0.236); 
 }
 @keyframes breathIn {
     from {
         text-shadow: 0px 0px 30px white;
     }
     to {
-        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.756);
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
     }
 }
 @keyframes breathOut {
