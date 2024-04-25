@@ -30,3 +30,6 @@ function justWait() {
         console.log(timer);
     })
 }
+
+let button = document.querySelector("#title");
+button.addEventListener('click',main);
