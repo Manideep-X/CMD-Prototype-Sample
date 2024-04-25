@@ -1,0 +1,105 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-image: linear-gradient(rgb(0, 82, 32) 15.3%, rgb(0, 0, 0) 100%);
+    /* background-image: linear-gradient(rgb(1, 99, 42) 2.3%, rgb(19, 31, 15) 98.3%); */
+    background-repeat: no-repeat;
+    /* background-color: rgb(0, 55, 0); */
+    height: 100vh;
+    overflow: hidden;
+}
+.title h1{
+    font-family: "Space Mono", monospace;
+    text-align: center;
+    margin: 25px;
+    padding: 25px;
+    font-size: 60px;
+    letter-spacing: -3px;
+    word-spacing: -5px;
+    color: white;
+    animation: breathIn 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+.title h1:hover{
+    animation: breathOut 1.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+@keyframes breathIn {
+    from {
+        text-shadow: 0px 0px 30px white;
+    }
+    to {
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.756);
+    }
+}
+@keyframes breathOut {
+    from {
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.756);
+    }
+    to {
+        text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.756);
+    }
+}
+.terminal{
+    max-width: 800px;
+    height: 64.40vh;
+    margin: 40px auto;
+    border: 3px solid #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0px 0px 50px rgba(112, 180, 112, 0.25);
+}
+.terminal .top{
+    background-color: #1f1f1f;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px 3px 0px 0px;
+    grid-template-columns: [no-1] 50px [no-2] 600px [no-3] 50px [no-4] 50px [no-5] 50px [no-6];
+}
+.terminal .top .write h4{
+    font-family: 'Menlo', monospace;
+    text-align: left;
+    color: white;
+}
+.terminal .top .svg{
+    transition: background-color 150ms ease-in-out;  
+}
+.terminal .top .svg:hover{
+    cursor: pointer;
+    background-color: #2e2e2e;
+}
+.terminal .top .no1:hover{
+    background-color: red;
+}
+.terminal .top .logo img{
+    filter: invert();
+}
+.terminal .top .logo img, .terminal .top .svg img{
+    filter: invert();
+    display: inline-block;
+    vertical-align: middle;
+    padding: 12px;
+    height: 18px;
+}
+.terminal .space{
+    color: rgb(171, 171, 21);
+    background-color: black;
+    height: 58.30vh;
+    border-radius: 0px 0px 4px 4px;
+    overflow:scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+.terminal .space::-webkit-scrollbar{
+    background-color: #151515;
+    width: 15px;
+}
+.terminal .space::-webkit-scrollbar-thumb{
+    background-color: rgb(126, 126, 126);
+    border-radius: 10px;
+}
+.terminal .space span{
+    display: block;
+    font-family: 'Menlo', monospace;
+    padding: 5px;
+}
